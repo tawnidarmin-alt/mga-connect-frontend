@@ -160,3 +160,64 @@
   background-color: #ff4444; /* red AFTER cancellation */
   cursor: not-allowed;
 }
+/* =============================
+   HORIZONTAL BOOKING TABLE STYLE
+   ============================= */
+.bookings-container {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 20px;
+  font-size: 13px; /* smaller, compact text */
+}
+
+.bookings-container table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.bookings-container th,
+.bookings-container td {
+  border: 1px solid #ccc;
+  padding: 4px 6px; /* tighter padding */
+  text-align: left;
+  white-space: nowrap; /* keep inline, avoid wrapping */
+}
+
+.bookings-container th {
+  background-color: #007bff;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.bookings-container tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.bookings-container tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.bookings-container tr.cancelled {
+  background-color: #ffe6e6;
+  color: #666;
+}
+
+.bookings-container tr:hover {
+  background-color: #e6f0ff;
+}
+
+.cancel-button {
+  background-color: gray;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cancel-button:hover {
+  background-color: #ff5555;
+}
